@@ -30,3 +30,7 @@ Welcome to the **Password Generator**, a sleek and user-friendly tool designed t
 4. **Strength Check**: The strength indicator updates automatically based on the generated password.
 
 ---
+
+## Demo
+This is how it looks when live - 
+![Alt text]./Documents\Coding\Projects
