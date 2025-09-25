@@ -33,4 +33,4 @@ Welcome to the **Password Generator**, a sleek and user-friendly tool designed t
 
 ## Demo
 This is how it looks when live - 
-![Alt text]./Documents\Coding\Projects
+![Password Generator Screenshot](./pass_gen.png)
