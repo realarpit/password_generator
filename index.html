@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="mode-selector">
+            <label><input type="radio" name="mode" value="random" checked> Random</label>
+            <label><input type="radio" name="mode" value="custom"> Custom (Name-Based)</label>
+        </div>
+        <div class="password-display-wrapper">
+            <div class="password-box" id="password-display"></div>
+            <div class="eye-box">
+                <span class="eye-icon" id="eye-icon">👁️</span>
+            </div>
+        </div>
+        <div class="custom-input" id="custom-input" style="display: none;">
+            <label for="name-input">Enter Name/Base:</label>
+            <input type="text" id="name-input" placeholder="e.g., arpit" maxlength="20">
+        </div>
+
+        <div class="settings">
+            <label for="length">Length</label>
+            <input type="range" id="length" min="8" max="32" value="16">
+            <span id="length-value">16</span>
+            <br>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Uppercase</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Lowercase</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Numbers</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="symbols" checked>
+                <label for="symbols">Symbols</label>
+            </div>
+        </div>
+        <button id="generate-btn">Generate Password</button>
+        <button id="copy-btn">Copy</button>
+        <button id="qr-btn">Export QR</button>
+        <button id="hide-qr-btn" style="display: none;">Hide QR</button>
+        <button id="export-file-btn">Export to File</button>
+        <div id="error-message">Please select at least one character type or enter a name.</div>
+        <div id="strength-indicator" style="margin-top: 10px;">
+            <div id="strength-bar" style="height: 10px; width: 0; background-color: #ff0000;"></div>
+            <span id="strength-text">Strength: N/A</span>
+        </div>
+        <div id="qr-code" style="display: none; margin-top: 10px;"></div>
+        <button id="theme-toggle">Toggle Theme</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
